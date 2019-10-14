@@ -1,0 +1,7 @@
+name: "my-website"
+navbar:
+  title: "African Nightshades"
+  left:
+    - text: "R script"
+      href: index.html
+output_dir: "."
