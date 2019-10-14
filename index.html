@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Quantification of phytochemicals in African nightshade leaves using UHPLC-QqQ-MS/MS</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">African Nightshades</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">R script</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Quantification of phytochemicals in African nightshade leaves using UHPLC-QqQ-MS/MS</h1>
+
+</div>
+
+
+<p><br></p>
+<p><strong>Bo Yuan </strong> <em>Oct 2019 updated</em></p>
+<p><br></p>
+<pre class="r"><code>library(readxl)
+library(tidyr)
+library(dplyr)
+library(stringr)
+library(rebus)
+library(ggplot2)
+library(ComplexHeatmap)
+library(circlize)
+library(RColorBrewer)
+library(gridExtra)
+library(cowplot)</code></pre>
+<pre class="r"><code>path = &quot;/Users/Boyuan/Desktop/Manuscript files/5th_AIV leaf QQQ_JFC/Oct 2019 JFC/NS_leaf_PhytochemQQQ dataset.xlsx&quot;</code></pre>
+<div id="contrast-analysis" class="section level1">
+<h1><span class="header-section-number">1</span> Contrast analysis</h1>
+<div id="tidy-up" class="section level2">
+<h2><span class="header-section-number">1.1</span> Tidy up</h2>
+<pre class="r"><code>d = read_excel(path, sheet = &quot;Contrast.analysis&quot;)
+
+# gather compounds
+d = d %&gt;% 
+  gather(`chlorogenic acid`, quercetin, kaempferol, rhamnetin, isorhamnetin, solasodine, diosgenin, tigogenin,
+         key = compound, value = data) 
+# replace N.D. with zero values
+d$data = d$data %&gt;% str_replace(pattern = &quot;N.D.&quot;, replacement = &quot;0 ± 0&quot;)
+# plit data into mean and standard deviation
+d = d %&gt;% separate(data, into = c(&quot;mean&quot;, &quot;std&quot;), sep = &quot; ± &quot;)
+# convert mean and std to numeric value
+d$mean = d$mean %&gt;% as.numeric()
+d$std = d$std %&gt;% as.numeric()
+# arrange order of display
+d$compound  = d$compound %&gt;%
+  factor(levels = (c(&quot;chlorogenic acid&quot;, &quot;quercetin&quot;, &quot;kaempferol&quot;, &quot;rhamnetin&quot;, 
+                     &quot;isorhamnetin&quot;, &quot;solasodine&quot;, &quot;diosgenin&quot;, &quot;tigogenin&quot;)), 
+         ordered = T)
+
+# NOTICE HERE!!
+d = d %&gt;% filter(ID != &quot;PI 312110&quot; &amp; compound != &quot;rhamnetin&quot;)
+d = d %&gt;% filter(compound != &quot;rhamnetin&quot;)</code></pre>
+</div>
+<div id="visualization" class="section level2">
+<h2><span class="header-section-number">1.2</span> Visualization</h2>
+<div id="define-plotting-function" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Define plotting function</h3>
+<pre class="r"><code># define plot function
+myplot = function(dataset, category){
+  dataset %&gt;%
+    ggplot(aes_string(x = 1, y = &quot;mean&quot;, color = category, fill = category), alpha = 0.2) + 
+    geom_boxplot(alpha = .2, outlier.alpha = 0) +
+    facet_wrap(~compound, nrow = 1, strip.position = &quot;bottom&quot;, scales = &quot;free&quot;) +
+    # format
+    theme_classic() + 
+    theme(axis.text = element_text(color = &quot;black&quot;, size = 12), 
+          axis.title = element_text(face = &quot;bold&quot;),
+          legend.title =  element_blank(), legend.position = &quot;right&quot;, 
+          legend.text = element_text(colour = &quot;black&quot;, size = 12),
+          strip.background = element_blank(), strip.text = element_text(face = &quot;bold&quot;), 
+          # remove all y-axis related (not for plot, not for aesthetic)
+          axis.text.x = element_blank(), axis.line.x = element_blank(), 
+          axis.ticks.x = element_blank(), axis.title.x = element_blank(), 
+          axis.title.y = element_text(size = 12, face = &quot;bold&quot;)) +
+    # add mean!
+    stat_summary(fun.y = mean, geom = &quot;point&quot;, shape = 23, 
+                 position = position_jitterdodge(0), 
+                 color = &quot;black&quot;, size = 3, stroke = 0.8)+
+    scale_y_continuous(breaks = scales::pretty_breaks(7), 
+                       limits = c(NA, NA)) + labs(y = &quot;Content (mg/100g DW)&quot;) +
+    scale_color_brewer(palette = ifelse(category == &quot;Species&quot;, &quot;Set1&quot;, &quot;Set2&quot;)) +
+    scale_fill_brewer(palette = ifelse(category == &quot;Species&quot;, &quot;Set1&quot;, &quot;Set2&quot;)) +
+    
+    geom_text(aes(label = `Sample No.`), 
+              position = position_jitterdodge(0.25), size = 3.4, fontface = &quot;bold&quot;)
+}</code></pre>
+</div>
+<div id="plotting" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Plotting</h3>
+<pre class="r"><code># SPECIES CONTRAST  
+# There are four accessions of S. nigrum. Only one planted in Kenya, while all four planted in RU. 
+# THus compare those planted in RU.
+# This dataframe contains species planted in RU: 3 nigrumw with the peculiar nigrum USDA 312110 excluded), &amp; 8 scabrum
+species.contrast.df = d %&gt;% filter(`CultivationSite` == &quot;RU&quot; &amp; Species != &quot;N.D.&quot;)
+plt.species = myplot(species.contrast.df, category = &quot;Species&quot;) 
+
+# Cultivation site (environment) CONTRAST  
+# Only those IDs cultivated both in RU and Kenya are included for comparison.
+# The comparison includes a total of 6 comparisions, all from from scabru 
+selected.ID = c(&quot;BG 29&quot;, &quot;Ex Hai&quot;, &quot;BG 16&quot;, &quot;SS 49 (Olevolosi)&quot;, &quot;SS 04.2&quot;, &quot;SS 52&quot;)
+cultivationSite.contrast.df = d %&gt;% filter(ID %in% selected.ID)
+plt.cultivationSite = myplot(cultivationSite.contrast.df, category = &quot;CultivationSite&quot;)
+
+# combining two plot together
+grid.arrange(plt.species, plt.cultivationSite, nrow = 2)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-5-1.png" width="1152" /></p>
+</div>
+</div>
+<div id="scheffes-contrast" class="section level2">
+<h2><span class="header-section-number">1.3</span> Scheffe’s contrast</h2>
+<div id="define-contrast-function" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Define contrast function</h3>
+<pre class="r"><code># category = &quot;Species&quot;, group1 = &quot;S. nigrum&quot;, group2 = &quot;S. scabrum&quot;, alpha = 0.5, etc.
+# There should be only two groups in a given category
+calculateP = function(loop.df, alpha, category, group1, group2){ 
+  n.group1 = ( loop.df[[category]] == group1 ) %&gt;% sum()
+  n.group2 = ( loop.df[[category]] == group2) %&gt;% sum() 
+  
+  # print contrasted groups of the given category
+  print(paste(&quot;Contrast =&quot;, group1, &quot;-&quot;, group2))
+  
+  # set up Ci and Ci-related terms
+  Ci = c()
+  for (i in 1:nrow(loop.df)){
+    if( loop.df[[category]] [i] == group1){Ci[i] = (1/n.group1) 
+    } else { Ci[i] = - 1/ n.group2 }
+  }
+  
+  Contrast = sum(Ci * loop.df$mean)
+  `Sum.Ci^2` = sum(Ci^2)
+  
+  # MSE and critical value
+  n.treatment = nrow(loop.df)
+  df.error = (3-1) * n.treatment
+  SSE = ((loop.df$std)^2*(3-1)) %&gt;% sum()
+  MSE = SSE / df.error
+  critic.S = sqrt(  MSE/3 * `Sum.Ci^2`  ) * 
+    sqrt( (n.treatment - 1) * qf(p = 1- alpha, df1 = (n.treatment - 1), df2 = df.error) ) 
+  # notice alpha input
+  
+  # Significant or not?
+  ifsignificant = ifelse(
+    abs(Contrast) &gt;= critic.S, &quot;Yes! Significant!&quot;, &quot;NO....&quot;
+  )
+  
+  # print
+  
+  cat(unique(loop.df$compound) %&gt;% 
+        as.character(), # factor as character, otherwise output level of factor
+      &quot;: Critical value = &quot;, round(critic.S, 3), 
+      &quot;, Contrast =&quot;, round(Contrast, 3), ifsignificant, &quot;\n\n&quot;) 
+}</code></pre>
+</div>
+<div id="calculate-contrast-statistics" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Calculate contrast statistics</h3>
+<pre class="r"><code># compounds to loop through
+myCompounds = d$compound %&gt;% unique()</code></pre>
+<div id="contrast-between-species" class="section level4">
+<h4><span class="header-section-number">1.3.2.1</span> contrast between species</h4>
+<pre class="r"><code>for (i in myCompounds){
+  loop.df = species.contrast.df %&gt;% filter(compound == i) 
+  calculateP(loop.df, alpha = 0.6, 
+             category = &quot;Species&quot;, group1 = &quot;S. nigrum&quot;, group2 = &quot;S. scabrum&quot;)
+}</code></pre>
+<pre><code>## [1] &quot;Contrast = S. nigrum - S. scabrum&quot;
+## chlorogenic acid : Critical value =  31.932 , Contrast = 11.372 NO.... 
+## 
+## [1] &quot;Contrast = S. nigrum - S. scabrum&quot;
+## quercetin : Critical value =  26.757 , Contrast = 13.824 NO.... 
+## 
+## [1] &quot;Contrast = S. nigrum - S. scabrum&quot;
+## kaempferol : Critical value =  9.031 , Contrast = -10.293 Yes! Significant! 
+## 
+## [1] &quot;Contrast = S. nigrum - S. scabrum&quot;
+## isorhamnetin : Critical value =  0.703 , Contrast = 0.869 Yes! Significant! 
+## 
+## [1] &quot;Contrast = S. nigrum - S. scabrum&quot;
+## solasodine : Critical value =  1.667 , Contrast = 9.723 Yes! Significant! 
+## 
+## [1] &quot;Contrast = S. nigrum - S. scabrum&quot;
+## diosgenin : Critical value =  5.541 , Contrast = 8.8 Yes! Significant! 
+## 
+## [1] &quot;Contrast = S. nigrum - S. scabrum&quot;
+## tigogenin : Critical value =  32.492 , Contrast = 32.646 Yes! Significant!</code></pre>
+</div>
+<div id="contrast-between-cultivation-site" class="section level4">
+<h4><span class="header-section-number">1.3.2.2</span> contrast between cultivation site</h4>
+<pre class="r"><code>for (i in myCompounds){
+  loop.df = cultivationSite.contrast.df %&gt;% filter(compound == i) 
+  calculateP(loop.df, alpha = 0.001, 
+             category = &quot;CultivationSite&quot;, group1 = &quot;RU&quot;, group2 = &quot;Kenya&quot;)
+}</code></pre>
+<pre><code>## [1] &quot;Contrast = RU - Kenya&quot;
+## chlorogenic acid : Critical value =  77.88 , Contrast = 58.585 NO.... 
+## 
+## [1] &quot;Contrast = RU - Kenya&quot;
+## quercetin : Critical value =  73.267 , Contrast = -62.11 NO.... 
+## 
+## [1] &quot;Contrast = RU - Kenya&quot;
+## kaempferol : Critical value =  17.43 , Contrast = -3.432 NO.... 
+## 
+## [1] &quot;Contrast = RU - Kenya&quot;
+## isorhamnetin : Critical value =  1.609 , Contrast = -0.672 NO.... 
+## 
+## [1] &quot;Contrast = RU - Kenya&quot;
+## solasodine : Critical value =  0.014 , Contrast = 0.018 Yes! Significant! 
+## 
+## [1] &quot;Contrast = RU - Kenya&quot;
+## diosgenin : Critical value =  3.233 , Contrast = 9.95 Yes! Significant! 
+## 
+## [1] &quot;Contrast = RU - Kenya&quot;
+## tigogenin : Critical value =  80.1 , Contrast = 141.198 Yes! Significant!</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="variance-partition" class="section level1">
+<h1><span class="header-section-number">2</span> Variance partition</h1>
+<div id="effect-of-plant-varieties" class="section level2">
+<h2><span class="header-section-number">2.1</span> Effect of plant varieties</h2>
+<pre class="r"><code># SS between accessions
+SS.accessions = species.contrast.df %&gt;% 
+  group_by(compound, Species) %&gt;%
+  mutate(Species.mean = mean(mean), 
+         SS.accessions = (mean - Species.mean)^2*3) %&gt;%
+  group_by(compound) %&gt;%  
+  summarise(SS.accessions = sum(SS.accessions))
+
+# SS between species
+species.count = (species.contrast.df %&gt;% 
+                   filter(compound == &quot;chlorogenic acid&quot;))$Species %&gt;% 
+  table() %&gt;% as.data.frame() %&gt;%
+  rename(Species = &quot;.&quot;, counts = Freq)
+
+SS.species = species.contrast.df %&gt;% 
+  group_by(compound) %&gt;% mutate(grandmean = mean(mean)) %&gt;%
+  dplyr::group_by(compound, Species) %&gt;% 
+  summarise(Species.mean = mean(mean), 
+            grandmean = unique(grandmean)) %&gt;%
+  
+  inner_join(species.count, by = &quot;Species&quot;) %&gt;% 
+  mutate(SS = (Species.mean - grandmean)^2 * counts * 3) %&gt;%
+  group_by(compound) %&gt;% summarise(SS.species = sum(SS))</code></pre>
+<pre><code>## Warning: Column `Species` joining character vector and factor, coercing
+## into character vector</code></pre>
+<pre class="r"><code>## SSE 
+SSE = species.contrast.df %&gt;% mutate(diff.square = std^2 * (3-1)) %&gt;%
+  group_by(compound) %&gt;% summarise(SSE = sum(diff.square))
+
+
+## combine SS together to get the SST
+SS.df = cbind(SS.species, SS.accessions, SSE)
+SS.df = SS.df[, !(SS.df %&gt;% colnames() %&gt;% duplicated())] %&gt;% 
+  mutate(SST = SS.species + SS.accessions + SSE)</code></pre>
+<pre class="r"><code># import most original data (showing triplicated measurements) 
+raw = read_excel(path, sheet = &quot;R_plant conc.mg 100g.DW&quot;) %&gt;%
+  filter(ID != &quot;PI 312110&quot;)
+
+# Calculate the generic SST to confirm calculation correctness
+raw.species = raw %&gt;% filter(`CultivationSite` == &quot;RU&quot; &amp; Species != &quot;N.D.&quot; ) %&gt;%
+  gather(quercetin, kaempferol, rhamnein, isorhamnetin, solasodine, diosgenin, tigogenin, 
+         key = compound, value = content)
+
+raw.species.SST = raw.species %&gt;% 
+  group_by(compound) %&gt;% 
+  mutate(SST = (content - mean(content))^2 ) %&gt;%  
+  summarise(SST.generic = sum(SST))
+
+# This basically confirms the correctness of my calculation. 
+# The larger the content magnitude, the less susceptible the calculation is to rounding error
+
+inner_join(SS.df, raw.species.SST) %&gt;% 
+  mutate(error.percent = (SST - SST.generic)/SST * 100)</code></pre>
+<pre><code>## Joining, by = &quot;compound&quot;</code></pre>
+<pre><code>## Warning: Column `compound` joining factor and character vector, coercing
+## into character vector</code></pre>
+<pre><code>##       compound  SS.species SS.accessions        SSE         SST
+## 1    quercetin 1250.886005   429603.7033 12322.1750 443176.7643
+## 2   kaempferol  693.396368     6155.0267  1403.8180   8252.2410
+## 3 isorhamnetin    4.940028      405.0009     8.5116    418.4525
+## 4   solasodine  618.775256      704.4920    47.8488   1371.1160
+## 5    diosgenin  506.832001     8972.3888   528.4644  10007.6852
+## 6    tigogenin 6975.821023   735140.5134 18170.2368 760286.5713
+##   SST.generic error.percent
+## 1 443172.1504   0.001041076
+## 2   9316.0197 -12.890784976
+## 3    418.6207  -0.040209016
+## 4    999.7155  27.087460461
+## 5  10008.1637  -0.004781342
+## 6 760276.0548   0.001383225</code></pre>
+<pre class="r"><code># Now plot the partitioned variance for each compound!!!
+SS.df = SS.df %&gt;% gather(-1, key = Source, value = value)
+
+SS.df$Source = SS.df$Source %&gt;% 
+  str_replace(pattern = &quot;SS.species&quot;, replacement = &quot;Species&quot;)
+
+SS.df$Source = SS.df$Source %&gt;% 
+  str_replace(pattern = &quot;SS.accessions&quot;, replacement = &quot;Accessions&quot;)
+
+SS.df$Source = SS.df$Source %&gt;%
+  str_replace(pattern = &quot;SSE&quot;, replacement = &quot;Measurement&quot;)
+
+source.levels = data.frame(Source = c(&quot;Species&quot;, &quot;Accessions&quot;, &quot;Measurement&quot;), 
+                           level = c(1, 2, 3))
+
+SS.df = inner_join(SS.df, source.levels)
+
+SS.df$Source = SS.df$Source %&gt;% 
+  factor(levels = c(&quot;Species&quot;,  &quot;Accessions&quot;, &quot;SST&quot;, &quot;Measurement&quot;))
+
+SS.df$compound  = SS.df$compound %&gt;% 
+  factor(levels = (c(&quot;chlorogenic acid&quot;, &quot;quercetin&quot;, &quot;kaempferol&quot;, &quot;rhamnetin&quot;, 
+                     &quot;isorhamnetin&quot;, &quot;solasodine&quot;, &quot;diosgenin&quot;, &quot;tigogenin&quot;)), 
+         ordered = T)
+
+# add contribution percent
+SS.df = SS.df %&gt;% filter(Source != &quot;SST&quot;) %&gt;% 
+  group_by(compound) %&gt;% 
+  mutate(percent = (value/sum(value)* 100) %&gt;% round(1))
+
+plt.species.vairance.partition = SS.df %&gt;% filter(Source != &quot;SST&quot;) %&gt;%
+  ggplot(aes(x = compound, y = percent, fill = Source)) + 
+  geom_bar(stat = &quot;identity&quot;, position = &quot;stack&quot;, alpha = 0.7, 
+           color = &quot;black&quot;, size = 0.1)  + 
+  theme_classic() + 
+  theme(axis.text = element_text(color = &quot;black&quot;, size = 12),
+        axis.title = element_blank(), 
+        legend.title = element_blank(),
+        legend.text = element_text(size = 12)) +
+  scale_fill_brewer(palette = &quot;OrRd&quot;) +
+  geom_text(aes(label = percent), 
+            position = position_stack(0.5), 
+            color = &quot;black&quot;,  size = 3.1)
+
+plt.species.vairance.partition</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="960" /></p>
+</div>
+<div id="effect-of-cultivation-environment" class="section level2">
+<h2><span class="header-section-number">2.2</span> Effect of cultivation environment</h2>
+<pre class="r"><code># SS of accessions
+cultivationSite.contrast.df = cultivationSite.contrast.df %&gt;% 
+  group_by(compound) %&gt;%  
+  mutate(grandmean = mean(mean)) %&gt;% 
+  group_by(compound, ID) %&gt;% 
+  mutate(accession.mean = mean(mean), 
+         SS.accession = (accession.mean - grandmean)^2*3)
+
+# SS of environment
+cultivationSite.contrast.df = cultivationSite.contrast.df %&gt;% 
+  group_by(compound, CultivationSite) %&gt;% 
+  mutate(cultivationSite.mean = mean(mean), 
+         SS.cultivationSite = (cultivationSite.mean - grandmean)^2*3)
+
+# SS of accession &amp; environment interaction
+cultivationSite.contrast.df = cultivationSite.contrast.df %&gt;% 
+  group_by(compound, CultivationSite, ID) %&gt;%
+  mutate(SS.interaction = (mean + grandmean - accession.mean - cultivationSite.mean)^2*3)
+
+# SSE
+cultivationSite.contrast.df = cultivationSite.contrast.df %&gt;% 
+  mutate(SSE = (std^2) * (3-1))
+
+# SST
+cultivationSite.contrast.df = cultivationSite.contrast.df %&gt;% 
+  mutate(SST = SSE + SS.cultivationSite + SS.accession + SS.interaction)
+
+# Sum rows up for final SS
+cultivationSite.SS.summary = cultivationSite.contrast.df %&gt;% 
+  group_by(compound) %&gt;% 
+  summarise(SSE = sum(SSE), 
+            SS.cultivationSite = sum(SS.cultivationSite),
+            SS.accession = sum(SS.accession), 
+            SS.interaction = sum(SS.interaction),
+            SST = sum(SST))
+
+
+# check with generic SST to confirm correctness
+# recall &quot;selected.ID&quot; variable storing selected IDs for cultivation/environment comparision
+raw.CultivationSite = raw %&gt;% 
+  filter(ID %in% selected.ID) %&gt;%
+  gather(quercetin, kaempferol, rhamnein, isorhamnetin, solasodine, diosgenin, tigogenin,
+         key = compound, value = content)
+
+raw.CultivationSite.SST = raw.CultivationSite %&gt;% 
+  group_by(compound) %&gt;% mutate(SST = (content - mean(content))^2 ) %&gt;%  
+  summarise(SST.generic = sum(SST))
+
+# plot Variance partition !!!
+cultivationSite.SS.summary = cultivationSite.SS.summary %&gt;% 
+  gather(-1, key = source, value = SS)
+
+cultivationSite.SS.summary$source = cultivationSite.SS.summary$source %&gt;% 
+  str_replace(pattern = &quot;SSE&quot;, replacement = &quot;Measurement&quot;)
+
+cultivationSite.SS.summary$source = cultivationSite.SS.summary$source %&gt;% 
+  str_replace(pattern = &quot;SS.cultivationSite&quot;, replacement = &quot;Environment&quot;)
+
+cultivationSite.SS.summary$source = cultivationSite.SS.summary$source %&gt;% 
+  str_replace(pattern = &quot;SS.accession&quot;, replacement = &quot;Accession&quot;)
+
+cultivationSite.SS.summary$source = cultivationSite.SS.summary$source %&gt;% 
+  str_replace(pattern = &quot;SS.interaction&quot;, replacement = &quot;Interaction&quot;)
+
+# display order
+cultivationSite.SS.summary$source = cultivationSite.SS.summary$source %&gt;% 
+  factor(levels = c(&quot;Environment&quot;,  &quot;Accession&quot;, &quot;Interaction&quot;, &quot;Measurement&quot;))
+
+cultivationSite.SS.summary$compound  = cultivationSite.SS.summary$compound %&gt;% 
+  factor(levels = (c(&quot;chlorogenic acid&quot;, &quot;quercetin&quot;, &quot;kaempferol&quot;, &quot;rhamnetin&quot;, 
+                     &quot;isorhamnetin&quot;, &quot;solasodine&quot;, &quot;diosgenin&quot;, &quot;tigogenin&quot;)), ordered = T)
+# contribution percent
+cultivationSite.SS.summary = cultivationSite.SS.summary %&gt;% 
+  filter(source != &quot;SST&quot;) %&gt;%
+  group_by(compound) %&gt;%
+  mutate(percent = (SS/sum(SS)*100) %&gt;% round(1))
+
+# plotting
+plt.cultivationSite.variance.partition =  cultivationSite.SS.summary  %&gt;%  
+  ggplot(aes(x = compound, y = percent, fill = source)) +
+  geom_bar(stat = &quot;identity&quot;, position = &quot;stack&quot;, alpha = 0.7, 
+           color = &quot;black&quot;, size = 0.1)  + 
+  theme_classic() + 
+  theme(axis.text = element_text(color = &quot;black&quot;, size = 12),
+        axis.title = element_blank(),
+        legend.title = element_blank(),
+        legend.text = element_text(size = 12))+
+  scale_fill_brewer(palette = &quot;YlGn&quot;) + 
+  geom_text(aes(label = percent), position = position_stack(0.5), color = &quot;black&quot;, size = 3.1)
+plt.cultivationSite.variance.partition</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" width="960" /></p>
+</div>
+</div>
+<div id="content-profile-heatmap" class="section level1">
+<h1><span class="header-section-number">3</span> Content profile heatmap</h1>
+<div id="warm-up" class="section level2">
+<h2><span class="header-section-number">3.1</span> Warm up</h2>
+<pre class="r"><code># set uniform parameter for heatmap
+bar_width = 3 # for row and column color side bar
+
+# read data
+path &lt;- &quot;/Users/Boyuan/Desktop/My publication/5th. N.S. leaf quant QqQ/R data analysis manuscript data.xlsx&quot;
+data &lt;- lapply(excel_sheets(path), read_excel, path = path)
+content_df &lt;- data[[1]] %&gt;% as.data.frame()
+sample_df &lt;- data[[2]] %&gt;% as.data.frame()
+
+# simplify sample ID name in sample_df
+sample_df$ID[7:8] &lt;- rep(&quot;SS 49&quot;, 2)
+sample_df$ID &lt;-  str_replace_all(sample_df$ID, pattern = &quot;-&quot;, replacement = &quot;NA&quot;)
+
+
+# remove deviation values in content_df
+pattern = &quot;±&quot; %R% optional(SPC) %R% one_or_more(DGT) %R% DOT %R% one_or_more(DGT)
+content_mat &lt;-  vapply(content_df, str_replace, pattern = pattern, replacement = &quot;&quot;,  
+                       character(length = nrow(content_df))) # vapply convert dataframe to matrix
+
+# order columns in alphabetical order
+hm_mat &lt;- content_mat[, -1][, colnames(content_df)[2: ncol(content_df)] %&gt;% order()] 
+
+# add row names
+# matrix allow identical row names but data frame does not allow identical row names
+rownames(hm_mat) &lt;- sample_df$ID 
+
+# add sample code number
+rownames(hm_mat) = str_c(rownames(hm_mat), paste0(&quot;_&quot;, 1:20))
+
+# type conversion: character to numeric
+# set up matrix to be fill up 
+hm_mat_dbl &lt;- matrix(1: (ncol(hm_mat) * nrow(hm_mat)), nrow = nrow(hm_mat)) 
+rownames(hm_mat_dbl) &lt;- rownames(hm_mat)
+colnames(hm_mat_dbl) &lt;- colnames(hm_mat)
+
+for (i in 1: nrow(hm_mat)) {
+  for (j in 1: ncol(hm_mat)) {
+    hm_mat_dbl[i, j] &lt;- as.numeric(hm_mat[i, j])
+  }
+}
+
+# check warning numbers equal to counts of undetected entries
+# total number of &quot;N.D.&quot; values for undetected levels
+# sum(hm_mat == &quot;N.D.&quot;) 
+
+# value transformation
+minimum_value &lt;- min(hm_mat_dbl, na.rm = T)
+
+hm_mat_dbl_NAzero &lt;- replace_na(hm_mat_dbl, replace = 0)
+hm_mat_transformed &lt;- log10(hm_mat_dbl_NAzero + minimum_value/2) %&gt;% round(digits = 3)
+
+# color of main plot
+
+myblue &lt;- colorRampPalette(c(&quot;white&quot;,brewer.pal(9, &quot;Blues&quot;), &quot;black&quot;))(50)
+# pie(rep(1, length(myblue)), col = myblue)
+
+myblue_ramp2 &lt;- colorRamp2(seq(from = log10(minimum_value), 
+                               to = max(hm_mat_transformed), 
+                               length.out = 50), myblue)</code></pre>
+</div>
+<div id="column-annotation" class="section level2">
+<h2><span class="header-section-number">3.2</span> column annotation</h2>
+<pre class="r"><code># convert compound to class
+cmpd_class_code &lt;- c(&quot;chlorogenic acid&quot; = &quot;phenolic acid&quot;, 
+                     &quot;diosgenin&quot; = &quot;saponin&quot;, 
+                     &quot;isorhamnetin&quot; = &quot;flavonol&quot;,
+                     &quot;kaempferol&quot; = &quot;flavonol&quot;, 
+                     &quot;quercetin&quot; = &quot;flavonol&quot;, 
+                     &quot;rhamnetin&quot; = &quot;flavonol&quot;,
+                     &quot;solasodine&quot; = &quot;alkaloid&quot;, 
+                     &quot;tigogenin&quot; = &quot;saponin&quot;)
+cmpd_class &lt;-  cmpd_class_code[colnames(hm_mat_transformed)]
+
+# convert class to color
+Set1 &lt;- brewer.pal(9, &quot;Set1&quot;)
+# pie(rep(1, length(Set1)), col = Set1) # 9 being the darkest color
+
+class_color_code &lt;- c(&quot;phenolic acid&quot; = Set1[5],
+                      &quot;flavonol&quot; = Set1[3],
+                      &quot;saponin&quot; = &quot;steelblue&quot;,
+                      &quot;alkaloid&quot; = &quot;firebrick&quot;)
+class_color &lt;- class_color_code[cmpd_class]
+
+
+# make column sidebar 
+col_anno &lt;- HeatmapAnnotation(
+  cmpd.class = cmpd_class,
+  col = list(cmpd_class = class_color_code),
+  annotation_legend_param = list(title = &quot;compound category&quot;),
+  
+  # boxplot 
+  boxplot = anno_boxplot(hm_mat_transformed, 
+                         gp = gpar(fill = class_color),axis = T),
+  annotation_height = unit.c(unit(bar_width, &quot;mm&quot;), unit(20, &quot;mm&quot;)))</code></pre>
+</div>
+<div id="row-annotations" class="section level2">
+<h2><span class="header-section-number">3.3</span> Row annotations</h2>
+<div id="species" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> species</h3>
+<pre class="r"><code>red &lt;- brewer.pal(9, &quot;YlOrRd&quot;)
+# pie(rep(1, length(red)), col = red)
+species_color_code &lt;- c(&quot;S. scabrum&quot; = &quot;#800026&quot;,
+                        &quot;S. nigrum&quot; = &quot;#FEB24C&quot;, 
+                        &quot;N.D.&quot; = &quot;#FFFFCC&quot;)
+species_anno &lt;- rowAnnotation(species = sample_df$Species,
+                              col = list(`sample_df$Species` = species_color_code),
+                              width = unit(bar_width, &quot;mm&quot;),
+                              annotation_legend_param = list(title = &quot;species&quot;))</code></pre>
+</div>
+<div id="institution-source" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> institution source</h3>
+<pre class="r"><code>sample_df$Source[18:19] &lt;- rep(&quot;Simlaw Kenya&quot;,2)
+sample_df$Source[20] &lt;- &quot;Baker Creek Heirloom&quot;
+
+institute_color_code &lt;- c(
+  &quot;WorldVeg&quot; = &quot;#66C2A5&quot;,
+  &quot;USDA&quot; = &quot;#FC8D62&quot;, 
+  &quot;Kenyan local market&quot; = &quot;#8DA0CB&quot;, 
+  &quot;Simlaw Kenya&quot; = &quot;#E78AC3&quot;, 
+  &quot;Baker Creek Heirloom&quot; = &quot;#A6D854&quot;)
+
+institute_anno &lt;- rowAnnotation(source = sample_df$Source,
+                                col = list(`sample_df$Source` = institute_color_code),
+                                width = unit(bar_width, &quot;mm&quot;),
+                                annotation_legend_param = list(title =&quot;seed source&quot;))</code></pre>
+</div>
+<div id="cultivation-site" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> cultivation site</h3>
+<pre class="r"><code>greys &lt;- brewer.pal(9, &quot;Greys&quot;)
+# pie(rep(1, length(greys)), col = greys)
+site_color_code &lt;- c(&quot;Kenya&quot; = greys[4], &quot;RU&quot; = greys[8])  
+
+cultivation_site_anno &lt;- 
+  rowAnnotation(sites = sample_df$`Cultivation site`,
+                col = list(&quot;sample_df$`Cultivation site`&quot; = site_color_code),
+                width = unit(bar_width, &quot;mm&quot;),
+                annotation_legend_param = list(title = &quot;cultivation site&quot;))</code></pre>
+</div>
+<div id="cultivation-year" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> cultivation year</h3>
+<pre class="r"><code>sample_df$`Harvest time` &lt;-  str_replace_all(sample_df$`Harvest time`, 
+                                             pattern = exactly(&quot;2017-03-14&quot;),
+                                             replacement = &quot;2017 March&quot;)
+
+sample_df$`Harvest time` &lt;- str_replace_all(sample_df$`Harvest time`, 
+                                            pattern = exactly(&quot;2016-07-08&quot;),
+                                            replacement = &quot;2016 July&quot;)
+time &lt;- sample_df$`Harvest time` %&gt;% as.character()
+paired &lt;- brewer.pal(12, &quot;Paired&quot;)
+# pie(rep(1, length(paired)), col = paired)
+time_color_code &lt;- c(&quot;2017 March&quot; = paired[5],
+                     &quot;2016 July&quot; = paired[6])
+
+harvest_time_anno &lt;- rowAnnotation(time = time,
+                                   col = list(time = time_color_code),
+                                   width = unit(bar_width, &quot;mm&quot;),
+                                   annotation_legend_param = list(title = &quot;harvest time&quot;))</code></pre>
+<pre class="r"><code># make row stacked bar plot
+rowname &lt;- rownames(hm_mat_dbl_NAzero)
+rownames(hm_mat_dbl_NAzero) &lt;- NULL
+barplot_df &lt;-  hm_mat_dbl_NAzero %&gt;% as.data.frame()
+barplot_df$ID &lt;- rowname
+barplot_df &lt;- cbind(barplot_df[&quot;ID&quot;], barplot_df[1: (ncol(barplot_df) -1) ]) 
+
+barplot_mat &lt;- barplot_df %&gt;% 
+  mutate(`phenolic acid` = `chlorogenic acid`,
+         flavonol = isorhamnetin + kaempferol + quercetin + rhamnetin,
+         alkaloid = solasodine,
+         saponin = diosgenin + tigogenin) %&gt;%
+  select(`phenolic acid` : `saponin`) %&gt;% 
+  data.matrix()
+
+rownames(barplot_mat) &lt;- rowname
+
+barplot_anno &lt;- rowAnnotation(
+  barplot = row_anno_barplot(
+    barplot_mat, axis = T, 
+    gp = gpar(col = NA, fill = c(&quot;phenolic acid&quot; = Set1[5],
+                                 &quot;flavonol&quot; = Set1[3],
+                                 &quot;alkaloid&quot; = &quot;firebrick&quot;,
+                                 &quot;saponin&quot; = &quot;steelblue&quot;))),
+  annotation_width = unit(50, &quot;mm&quot;))</code></pre>
+</div>
+</div>
+<div id="draw-heatmap-main-body" class="section level2">
+<h2><span class="header-section-number">3.4</span> Draw heatmap main body</h2>
+<pre class="r"><code># make heatmap  ------------------------------------------
+main_plot &lt;- Heatmap(hm_mat_transformed, col = myblue_ramp2,
+                     heatmap_legend_param = list(title = &quot;log10 [mg/100 g DW]&quot;, 
+                                                 color_bar = &quot;continuous&quot;),
+                     row_names_gp = gpar(fontsize = 10),
+                     row_dend_width = unit(15, &quot;mm&quot;),
+                     column_dend_height = unit(15, &quot;mm&quot;),
+                     top_annotation = col_anno,
+                     cluster_columns = T,
+                     cluster_rows = T,
+                     rect_gp = gpar(col = &quot;black&quot;, lwd = 0.3))</code></pre>
+<pre class="r"><code>draw(species_anno + institute_anno + 
+       cultivation_site_anno + harvest_time_anno + main_plot + barplot_anno, 
+     heatmap_legend_side = &quot;bottom&quot;,
+     annotation_legend_side = &quot;bottom&quot;,
+     row_dend_side = &quot;left&quot;)</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-22-1.png" width="1152" /></p>
+</div>
+</div>
+<div id="principle-component-analysis" class="section level1">
+<h1><span class="header-section-number">4</span> Principle component analysis</h1>
+<pre class="r"><code># recall that sample_df is the sample label data set
+rownames(hm_mat_dbl_NAzero) = str_c(sample_df$`Sample No.`, &quot;_&quot;, sample_df$ID)</code></pre>
+<div id="all-accessions" class="section level2">
+<h2><span class="header-section-number">4.1</span> All accessions</h2>
+<pre class="r"><code>plt.PCA.ALL.accessions = hm_mat_dbl_NAzero %&gt;% scale() %&gt;% prcomp() %&gt;% 
+  ggbiplot::ggbiplot(labels = rowname, groups = as.character(sample_df$`Sample No.`)) +
+  theme_classic()  + # theme(legend.position = &quot;None&quot;) +
+  scale_x_continuous(breaks = seq(-2, 3, by = 1)) +
+  labs(title = &quot;All 20 accessions&quot;) +
+  theme(legend.position = &quot;none&quot;) +
+  stat_ellipse()
+plt.PCA.ALL.accessions</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-24-1.png" width="768" /></p>
+</div>
+<div id="comparison-by-species" class="section level2">
+<h2><span class="header-section-number">4.2</span> Comparison by species</h2>
+<p>By Species (planted in RU; all S. nigrum were cultivated in RU, no nigrum in Kenya trail)</p>
+<pre class="r"><code>RU.site = sample_df$`Cultivation site` == &quot;RU&quot;
+
+plt.PCA.species = hm_mat_dbl_NAzero[RU.site, ] %&gt;% # selecting only those planted in RU 
+  scale() %&gt;%prcomp() %&gt;%
+  ggbiplot::ggbiplot(labels = rownames(hm_mat_dbl_NAzero[RU.site, ]),
+                     groups = (sample_df %&gt;% filter(`Cultivation site` == &quot;RU&quot;))$Species,
+                     ellipse = T) +
+  theme_classic() + 
+  scale_color_brewer(palette = &quot;Dark2&quot;) +
+  scale_x_continuous() +
+  labs(title = &quot;species comparison in RU trail&quot;) 
+
+plt.PCA.species</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-25-1.png" width="768" /></p>
+</div>
+<div id="comparison-by-cultivation-site" class="section level2">
+<h2><span class="header-section-number">4.3</span> Comparison by cultivation site</h2>
+<p>By Cultivation site (comprising 6 pairwise comparision of S. scabrum)</p>
+<pre class="r"><code>plt.PCA.cultivationSite = 
+  # select 6 pairwise S. scabrum in two sites; remove rhamnetin, found lacking in selected cultivars
+  hm_mat_dbl_NAzero[1:12, -6] %&gt;% 
+  scale() %&gt;% prcomp() %&gt;%
+  ggbiplot::ggbiplot(labels = rownames(hm_mat_dbl_NAzero[1:12, -6]), 
+                     groups = sample_df$`Cultivation site`[1:12], ellipse = T) +
+  theme_classic() + 
+  scale_color_brewer(palette = &quot;Set1&quot;) + 
+  scale_x_continuous() +
+  labs(title = &quot;S.scabrum cultivation site comparison&quot;)
+plt.PCA.cultivationSite</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-26-1.png" width="768" /></p>
+<p>By Cultivation site–grouped by accessions</p>
+<pre class="r"><code>plt.PCA.cultivationSite_grouped.by.accessions = 
+  # select 6 pairwise S. scabrum in two sites; remove rhamnetin, found lacking in selected cultivars
+  hm_mat_dbl_NAzero[1:12, -6] %&gt;% 
+  scale() %&gt;% prcomp() %&gt;%
+  ggbiplot::ggbiplot(var.axes = T,
+                     labels = rownames(hm_mat_dbl_NAzero[1:12, -6]), 
+                     groups = sample_df$ID[1:12]) +
+  theme_classic() + # theme(legend.position = &quot;None&quot;) + 
+  scale_x_continuous() +  
+  labs(title = &quot;S.scabrum cultivation site comparison&quot;) 
+plt.PCA.cultivationSite_grouped.by.accessions</code></pre>
+<p><img src="index_files/figure-html/unnamed-chunk-27-1.png" width="768" /></p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3,h4",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = false;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
