@@ -1,5 +1,5 @@
 ---
-title: "Quantification of phytochemicals in African nightshade leaves using UHPLC-QqQ-MS/MS"
+title: "Simultaneous quantification of polyphenols, glycoalkaloids and saponins in African nightshade leaves using ultra-high performance liquid chromatography-tandem mass spectrometry with acid assisted hydrolysis and multivariate analysis"
 output: 
   html_document:
     toc: true
@@ -12,7 +12,7 @@ output:
 
 <br>
 
-**Bo Yuan   ** *Oct 2019 updated*  
+**Statistical analysis and visualization   ** *Oct 2019 updated*  
 
 
 <br>
