@@ -19,29 +19,27 @@ This repository documents the original R script used for data analysis and visua
   
 ## Follow me. Keep updated with my latest research
 
-<table style="border-collapse: collapse; width: 100%; border: 0;">
+<table style="border-collapse: collapse; width: 100%; border: 0; border-spacing: 0;">
   <tr>
     <td style="border: none;" align="center">
       <a href="https://medium.com/@yuanbo.faith">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Medium_%28website%29_logo.svg" alt="Medium Logo" style="max-width: 100px; height: auto; margin: 10px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Medium_%28website%29_logo.svg" alt="Medium Logo" style="height: 32px; max-width: 100px; margin: 10px;">
       </a>
     </td>
     <td style="border: none;" align="center">
       <a href="https://x.com/yuanbogeneral">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X Logo" style="max-width: 100px; height: auto; margin: 10px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="X Logo" style="height: 45px; max-width: 100px; margin: 10px;">
       </a>
     </td>
     <td style="border: none;" align="center">
       <a href="https://www.databrewer.co/">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo_of_DataBrewer.co.png" alt="DataBrewer Logo" style="max-width: 100px; height: auto; margin: 10px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo_of_DataBrewer.co.png" alt="DataBrewer Logo" style="height: 60px; max-width: 100px; margin: 10px;">
       </a>
     </td>
     <td style="border: none;" align="center">
       <a href="https://connects.catalyst.harvard.edu/Profiles/display/Person/193422">
-        <img src="https://upload.wikimedia.org/wikipedia/en/1/18/Harvard_shield-Public_Health.png" alt="Harvard Public Health Logo" style="max-width: 100px; height: auto; margin: 10px;">
+        <img src="https://upload.wikimedia.org/wikipedia/en/1/18/Harvard_shield-Public_Health.png" alt="Harvard Public Health Logo" style="height: 65px; max-width: 100px; margin: 10px;">
       </a>
     </td>
   </tr>
 </table>
-
-  
