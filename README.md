@@ -41,5 +41,20 @@ This repository documents the original R script used for data analysis and visua
         <img src="https://upload.wikimedia.org/wikipedia/en/1/18/Harvard_shield-Public_Health.png" alt="Harvard Public Health Logo" style="height: 65px; max-width: 100px; margin: 10px;">
       </a>
     </td>
+    <td style="border: none;" align="center">
+      <a href="https://orcid.org/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID Logo" style="height: 50px; max-width: 100px; margin: 10px;">
+      </a>
+    </td>
+    <td style="border: none;" align="center">
+      <a href="https://www.linkedin.com/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" style="height: 50px; max-width: 100px; margin: 10px;">
+      </a>
+    </td>
+    <td style="border: none;" align="center">
+      <a href="https://www.academia.edu/">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Academia.edu_logo.svg" alt="Academia Logo" style="height: 25px; max-width: 100px; margin: 10px;">
+      </a>
+    </td>
   </tr>
 </table>
