@@ -42,17 +42,17 @@ This repository documents the original R script used for data analysis and visua
       </a>
     </td>
     <td style="border: none;" align="center">
-      <a href="https://orcid.org/">
+      <a href="https://orcid.org/0000-0003-0222-8095">
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg" alt="ORCID Logo" style="height: 50px; max-width: 100px; margin: 10px;">
       </a>
     </td>
     <td style="border: none;" align="center">
-      <a href="https://www.linkedin.com/">
+      <a href="https://www.linkedin.com/in/bo-yuan-amazing/">
         <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" style="height: 50px; max-width: 100px; margin: 10px;">
       </a>
     </td>
     <td style="border: none;" align="center">
-      <a href="https://www.academia.edu/">
+      <a href="https://harvard.academia.edu/BYuan">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Academia.edu_logo.svg" alt="Academia Logo" style="height: 25px; max-width: 100px; margin: 10px;">
       </a>
     </td>
