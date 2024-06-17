@@ -56,5 +56,10 @@ This repository documents the original R script used for data analysis and visua
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Academia.edu_logo.svg" alt="Academia Logo" style="height: 15px; max-width: 100px; margin: 10px;">
       </a>
     </td>
+    <td style="border: none;" align="center">
+      <a href="https://scholar.google.com/citations?user=aFh0570AAAAJ&hl=en">
+        <img src="https://static-00.iconduck.com/assets.00/google-scholar-icon-2048x2048-sjbhklt7.png" alt="Google Scholar" style="height: 35px; max-width: 100px; margin: 10px;">
+      </a>
+    </td>
   </tr>
 </table>
